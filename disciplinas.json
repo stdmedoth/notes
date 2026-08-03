@@ -1,0 +1,12 @@
+{
+    "biomol_comp": {
+        "nome": "Biologia Molecular Computacional",
+        "professor": "Prof. Dr. Geraldo Sartori",
+        "dias_aula": [0, 3]
+    },
+    "termodinamica": {
+        "nome": "Termodinamica e Fisica Estatística",
+        "professor": "Prof. Dr. Victor Luiz Quito",
+        "dias_aula": [1, 4]
+    }
+}
