@@ -1,8 +1,8 @@
 # 📝 Arquivo de Anotações e Manuscritos (Automatizado com LaTeX)
 
-Este repositório privado é dedicado ao armazenamento, backup e organização das fotos e digitalizações das minhas anotações feitas no papel [cite: 1]. 
+Este repositório privado é dedicado ao armazenamento, backup e organização das fotos e digitalizações das minhas anotações feitas no papel.
 
-Para otimizar o fluxo de estudo e economizar tempo, o repositório agora conta com uma automação em Python (`notas.py`) que organiza os arquivos automaticamente por data e disciplina, além de compilar tudo em PDFs profissionais utilizando LaTeX. A antiga sugestão de organização manual em pastas como `materias/` ou `por-data/` [cite: 1] foi totalmente substituída pelo novo console.
+Para otimizar o fluxo de estudo e economizar tempo, o repositório agora conta com uma automação em Python (`notas.py`) que organiza os arquivos automaticamente por data e disciplina, além de compilar tudo em PDFs profissionais utilizando LaTeX. A antiga sugestão de organização manual em pastas como `materias/` ou `por-data/`  foi totalmente substituída pelo novo console.
 
 ---
 
