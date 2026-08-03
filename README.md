@@ -1,19 +1,19 @@
 # 📝 Arquivo de Anotações e Manuscritos (Automatizado com LaTeX)
 
-Este repositório privado é dedicado ao armazenamento, backup e organização das fotos e digitalizações das minhas anotações feitas no papel [cite: 3].
+Este repositório privado é dedicado ao armazenamento, backup e organização das fotos e digitalizações das minhas anotações feitas no papel.
 
-Para otimizar o fluxo de estudo e economizar tempo, o repositório agora conta com uma automação em Python (`notas.py`) que organiza os arquivos automaticamente por data e disciplina, além de compilar tudo em PDFs profissionais utilizando LaTeX [cite: 3]. A antiga sugestão de organização manual em pastas como `materias/` ou `por-data/` foi totalmente substituída pelo novo console [cite: 3].
+Para otimizar o fluxo de estudo e economizar tempo, o repositório agora conta com uma automação em Python (`notas.py`) que organiza os arquivos automaticamente por data e disciplina, além de compilar tudo em PDFs profissionais utilizando LaTeX. A antiga sugestão de organização manual em pastas como `materias/` ou `por-data/` foi totalmente substituída pelo novo console.
 
 ---
 
 ## ⚙️ Pré-requisitos
 
-- **Python 3** (nativo do sistema) [cite: 3]
-- **LaTeX** (`pdflatex` instalado e adicionado ao PATH do sistema) [cite: 3]
+- **Python 3** (nativo do sistema) 
+- **LaTeX** (`pdflatex` instalado e adicionado ao PATH do sistema) 
 
 ## 🛠️ Configuração
 
-As disciplinas devem ser cadastradas no arquivo `disciplinas.json` na raiz do projeto [cite: 3]. Defina os dias de aula usando uma escala de `0` (Segunda) a `6` (Domingo) [cite: 3].
+As disciplinas devem ser cadastradas no arquivo `disciplinas.json` na raiz do projeto. Defina os dias de aula usando uma escala de `0` (Segunda) a `6` (Domingo) .
 
 ```json
 {
@@ -32,16 +32,16 @@ As disciplinas devem ser cadastradas no arquivo `disciplinas.json` na raiz do pr
 
 ## 🚀 Guia de Uso do Console (`notas.py`)
 
-O gerenciamento das anotações agora é feito via linha de comando [cite: 3].
+O gerenciamento das anotações agora é feito via linha de comando .
 
 ### 1. Ver a agenda
-Lista todas as disciplinas cadastradas no JSON e destaca visualmente quais aulas estão programadas para o dia atual [cite: 3].
+Lista todas as disciplinas cadastradas no JSON e destaca visualmente quais aulas estão programadas para o dia atual .
 ```bash
 python notas.py list
 ```
 
 ### 2. Inicializar o dia
-Cria as estruturas de pastas necessárias (`Aulas/DATA_Materia/imagens`) para todas as disciplinas do dia [cite: 3].
+Cria as estruturas de pastas necessárias (`Aulas/DATA_Materia/imagens`) para todas as disciplinas do dia .
 ```bash
 python notas.py init
 ```
@@ -57,13 +57,13 @@ python notas.py add "caminho/para/foto.jpg" --disciplina fisica_computacional
 
 ### 4. Compilar os PDFs
 
-**Para compilar todas as aulas do dia (Recomendado):** [cite: 3]
-O console detecta quais matérias receberam fotos naquele dia, pede o assunto de cada uma em tempo real e compila os PDFs em sequência [cite: 3].
+**Para compilar todas as aulas do dia (Recomendado):** 
+O console detecta quais matérias receberam fotos naquele dia, pede o assunto de cada uma em tempo real e compila os PDFs em sequência .
 ```bash
 python notas.py compile-all
 ```
 
-**Para compilar uma disciplina específica individualmente:** [cite: 3]
+**Para compilar uma disciplina específica individualmente:** 
 ```bash
 python notas.py compile --disciplina fisica_computacional --assunto "Introdução à Dinâmica Molecular"
 ```
@@ -72,7 +72,7 @@ python notas.py compile --disciplina fisica_computacional --assunto "Introduçã
 
 ## 📁 Nova Estrutura de Diretórios Automática
 
-Com o uso do script, o repositório assume dinamicamente o seguinte formato [cite: 3]:
+Com o uso do script, o repositório assume dinamicamente o seguinte formato:
 
 ```text
 .
