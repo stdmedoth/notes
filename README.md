@@ -1,46 +1,21 @@
-# 📝 Obsidian Assets & Note Scans
+# 📝 Arquivo de Anotações e Manuscritos
 
-Este repositório privado é dedicado ao armazenamento e hospedagem de imagens, diagramas e escaneamentos de anotações manuscritas utilizados no meu cofre do **Obsidian**.
+Este repositório privado é dedicado ao armazenamento, backup e organização de fotos e digitalizações das minhas anotações feitas no papel.
 
 ---
 
-## 📁 Estrutura de Pastas
+## 📁 Estrutura de Organização Sugerida
+
+Você pode organizar as pastas por **assunto/matéria** ou por **ano/mês**:
 
 ```text
 .
-├── assets/
-│   ├── 2026/             # Organização por ano (opcional)
-│   └── ...
-├── README.md
-└── .gitignore
-```
-
----
-
-## ⚙️ Como Funciona a Integração
-
-1. **Captura:** Anotações em papel são digitalizadas/fotografadas (ex: via app vFlat ou Adobe Scan).
-2. **Upload Automático:** Utiliza-se o plugin **Image Auto Upload Plugin** (ou PicGo) integrado ao Obsidian.
-3. **Link na Nota:** O Obsidian insere automaticamente o link cru (*raw*) da imagem hospedada aqui:
-   `![Anotação](https://raw.githubusercontent.com/<SEU_USUARIO>/<SEU_REPOSITORIO>/main/assets/imagem.png)`
-
----
-
-## 🔑 Configuração Rápida do Token (PAT)
-
-Para permitir que o Obsidian faça upload automático para este repositório:
-1. Vá em **GitHub > Settings > Developer Settings > Personal Access Tokens > Tokens (classic)**.
-2. Gere um novo token com a permissão **`repo`** (ou `contents: write`).
-3. Copie o token gerado e insira nas configurações do plugin no Obsidian.
-
----
-
-## 🔒 Privacidade e Boas Práticas
-
-* **Repositório Privado:** Mantenha este repositório marcado como **Privado** caso contenha anotações pessoais ou acadêmicas.
-* **Tamanho do Repositório:** Mantenha o repositório abaixo de 1 GB a 5 GB para garantir bom desempenho no Git.
-* **Formato de Imagem Recomendado:** Dê preferência a formatos compactados (como `.webp` ou `.jpg` otimizado) para economizar espaço e acelerar o carregamento.
-
----
-
-*Mantido automaticamente via Obsidian.*
+├── materias/
+│   ├── materia-01/
+│   │   ├── aula-01.jpg
+│   │   └── aula-02.jpg
+│   └── materia-02/
+├── por-data/
+│   └── 2026-08/
+│       └── 2026-08-03-anotacao.jpg
+└── README.md
