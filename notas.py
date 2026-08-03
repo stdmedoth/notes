@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import argparse
 import json
 import os
@@ -62,7 +63,7 @@ def cmd_init(args):
         print(f"[OK] Diretório criado/verificado: {pasta}")
 
 def cmd_add(args):
-    """Adiciona uma imagem à pasta da disciplina."""
+    """Adiciona uma imagem à pasta da disciplina (Opcional se for mover manualmente)."""
     pasta = obter_pasta_dia(args.disciplina)
     pasta_img = os.path.join(pasta, 'imagens')
     
@@ -88,11 +89,15 @@ def realizar_compilacao(id_disc, dados_disc, assunto):
         print(f"Erro: Pasta de imagens não encontrada para {id_disc}.")
         return False
 
-    imagens = sorted([img for img in os.listdir(pasta_img) if img.lower().endswith(('.png', '.jpg', '.jpeg'))])
+    # Filtra apenas imagens
+    arquivos_img = [img for img in os.listdir(pasta_img) if img.lower().endswith(('.png', '.jpg', '.jpeg'))]
     
-    if not imagens:
+    if not arquivos_img:
         print(f"Erro: Nenhuma imagem encontrada na pasta de {id_disc} para compilar.")
         return False
+
+    # ORDENA PELA DATA DE MODIFICAÇÃO (do arquivo mais antigo/tirado primeiro para o mais novo)
+    imagens = sorted(arquivos_img, key=lambda x: os.path.getmtime(os.path.join(pasta_img, x)))
 
     hoje_formatado = datetime.now().strftime('%d/%m/%Y')
     
@@ -177,7 +182,7 @@ def cmd_compile_all(args):
             compilacoes_feitas += 1
             
     if compilacoes_feitas == 0:
-        print("Nenhuma foto foi adicionada nas pastas das disciplinas de hoje. Nada para compilar.")
+        print("Nenhuma foto foi encontrada nas pastas das disciplinas de hoje. Nada para compilar.")
     else:
         print("-" * 40)
         print("Todas as disciplinas do dia foram compiladas!")
@@ -192,7 +197,7 @@ parser_list = subparsers.add_parser('list', help='Lista as disciplinas cadastrad
 # Comando INIT
 parser_init = subparsers.add_parser('init', help='Cria as pastas das disciplinas do dia atual')
 
-# Comando ADD
+# Comando ADD (Mantido caso queira usar via terminal)
 parser_add = subparsers.add_parser('add', help='Adiciona uma foto à disciplina')
 parser_add.add_argument('arquivo', help='Caminho para o arquivo da foto')
 parser_add.add_argument('--disciplina', required=True, help='ID da disciplina')
